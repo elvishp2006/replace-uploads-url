@@ -66,7 +66,7 @@ class Replace_Uploads_Url {
 
     public function replace( $content ) {
         preg_match_all(
-            "#(https?:\/\/){$this->get_domain_host()}[/|.|\w|-]*\.(jpe?g|gif|png|svg)#",
+            "#(https?:\/\/){$this->get_domain_host()}[^.]*\.(jpe?g|gif|png|svg)#",
             $content,
             $images_match
         );
